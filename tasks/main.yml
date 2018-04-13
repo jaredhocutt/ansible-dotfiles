@@ -1,0 +1,21 @@
+---
+
+- name: Install required packages
+  dnf:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - git
+    - stow
+    - xclip
+  become: yes
+
+- name: Clone dotfiles repo
+  git:
+    repo: git@github.com:jaredhocutt/dotfiles.git
+    dest: ~/.dotfiles
+    update: yes
+    accept_hostkey: yes
+
+- include_tasks: enable.yml
+  with_items: "{{ dotfiles_enabled }}"

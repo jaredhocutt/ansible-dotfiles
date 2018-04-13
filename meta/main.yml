@@ -1,0 +1,12 @@
+galaxy_info:
+  author: Jared Hocutt
+  description: Clones my dotfile repo and enables the dotfiles specified by the user.
+
+  license: BSD
+
+  min_ansible_version: 2.4
+
+  platforms:
+  - name: Fedora
+    versions:
+    - 27

@@ -1,0 +1,10 @@
+---
+
+- name: Check for {{ item.dotfile }}
+  stat:
+    path: '{{ item.dotfile }}'
+  register: st_dotfile_check
+
+- name: Enable {{ item.name }} dotfiles
+  command: ~/.dotfiles/enable.sh {{ item.name }}
+  when: st_dotfile_check.stat.exists == False
