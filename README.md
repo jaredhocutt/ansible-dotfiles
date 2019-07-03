@@ -1,4 +1,4 @@
-# Role Name
+# Dotfiles
 
 This role handles installing the dotfiles repo for Jared Hocutt and then
 enabling the specified dotfiles from that repo.
