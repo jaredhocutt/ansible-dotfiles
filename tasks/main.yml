@@ -1,13 +1,13 @@
 ---
+# tasks file for dotfiles
 
 - name: Install required packages
   dnf:
-    name: "{{ item }}"
+    name:
+      - git
+      - stow
+      - xclip
     state: present
-  with_items:
-    - git
-    - stow
-    - xclip
   become: yes
 
 - name: Clone dotfiles repo
@@ -18,4 +18,4 @@
     accept_hostkey: yes
 
 - include_tasks: enable.yml
-  with_items: "{{ dotfiles_enabled }}"
+  loop: "{{ dotfiles_enabled }}"
