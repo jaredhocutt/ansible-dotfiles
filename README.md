@@ -13,10 +13,9 @@ The hosts you are targeting should have the following packages:
 
 ## Role Variables
 
-
-| Variable                  | Required | Default | Description                                                                     |
-| ------------------------- | -------- | ------- | ------------------------------------------------------------------------------- |
-| dotfiles_enabled | &#9989; | `[]` | A list of dotfiles to enable.<br><br>Each item in the list should be a dictionary containing a `name` and `dotfile`. |
+| Variable         | Required | Default | Description                                                                                                          |
+| ---------------- | -------- | ------- | -------------------------------------------------------------------------------------------------------------------- |
+| dotfiles_enabled | &#9989;  | `[]`    | A list of dotfiles to enable.<br><br>Each item in the list should be a dictionary containing a `name` and `dotfile`. |
 
 ## Dependencies
 
@@ -36,7 +35,6 @@ None
             dotfile: ~/.vimrc
           - name: zsh
             dotfile: ~/.zshrc
-
 ```
 
 ## License
