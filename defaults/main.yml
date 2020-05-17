@@ -1,2 +1,5 @@
 ---
 # defaults file for dotfiles
+
+dotfiles_enabled: []
+
